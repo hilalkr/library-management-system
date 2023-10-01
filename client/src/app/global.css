@@ -1,0 +1,22 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "toastr";
+
+background-color{
+    color: chocolate;
+}
+
+.my-custom-text {
+  font-family: 'Lino', sans-serif;
+  font-weight: 300; /* Daha ince bir yazı için font ağırlığını ayarlayın */
+  font-size: 30px; /* Yazı boyutunu ayarlayın */
+  color: #2e2e2e;
+}
+
+.custom-text{
+  font-family: 'Lino', sans-serif;
+  font-weight: 300; /* Daha ince bir yazı için font ağırlığını ayarlayın */
+  font-size: 20px; /* Yazı boyutunu ayarlayın */
+  color: #2e2e2e;
+}

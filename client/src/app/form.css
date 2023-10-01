@@ -1,0 +1,57 @@
+/* reset-password-form.css */
+
+#root{
+    display: flex;
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    height: 100vh;
+    background-size: cover;
+    background-image: url(/bg-image.jpg); 
+  
+  }
+  
+  .form-container {
+    width: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* İçerik merkezleme */
+  }
+    
+    h1 {
+      text-align: center;
+      color: #333; /* Başlık rengi */
+    }
+    
+    label {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    button[type="submit"] {
+      background-color: #4caf50; /* Düğme arka plan rengi */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #45a049; /* Hover durumunda düğme rengi */
+    }
+    
+    .message {
+      text-align: center;
+      color: #333; /* Mesaj rengi */
+    }
+    
