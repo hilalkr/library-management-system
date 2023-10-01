@@ -20,3 +20,56 @@ background-color{
   font-size: 20px; /* Yazı boyutunu ayarlayın */
   color: #2e2e2e;
 }
+
+
+/* addbookform css */
+
+
+
+body {
+  /* Sayfa arkaplan rengi */
+
+  min-height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.form-container input::placeholder {
+  text-align: center; /* Placeholder metni ortalamak için */
+  color: #999; /* Placeholder metni rengi */
+}
+.form-container input {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.form-container button {
+  background-color: #d9622b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #e15210;
+}

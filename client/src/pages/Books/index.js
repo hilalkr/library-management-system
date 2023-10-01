@@ -17,20 +17,6 @@ const BooksPage = () => {
 
     fetchBooks();
   }, []);
-
-  return (
-    <div>
-      <Head>
-        <title>Kitaplar</title>
-      </Head>
-      <h1>Kitap Listesi</h1>
-      <ul>
-        {books.map(book => (
-          <li key={book._id}>{book.title} - {book.author}</li>
-        ))}
-      </ul>
-    </div>
-  );
 };
 
 export default BooksPage;
