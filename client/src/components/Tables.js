@@ -59,7 +59,7 @@ export default function BooksTable() {
             const updatedBooks = books.filter(book => book.id !== id);
             setBooks(updatedBooks);
   
-            // SweetAlert ile başarılı silme alert'i gösteriliyor
+           
             Swal.fire({
               title: 'Deleted!',
               text: 'Book has been deleted.',

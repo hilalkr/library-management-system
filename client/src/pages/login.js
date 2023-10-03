@@ -3,7 +3,7 @@ import '../app/global.css';
 import Navbar from '../components/Navbar';
 import axios from "axios";
 import Swal from "sweetalert2";
-
+import cookie from "js-cookie";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -26,7 +26,7 @@ function Login() {
       console.log(response);
 
       if (response.status === 200) {
-        localStorage.setItem('username', response.data.username);
+        cookie.set('token', response.data.token, {expires: 2});
         Swal.fire({
           icon: "success",
           title: "Success!",

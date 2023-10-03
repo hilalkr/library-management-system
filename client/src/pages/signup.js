@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import '../app/form.css';
-import { Link } from 'react-router-dom';
+import cookie from 'js-cookie';
 
 function Signup() {
   const [name, setName] = useState('');
@@ -24,7 +24,7 @@ function Signup() {
 
     axios
       .post('http://localhost:5000/api/auth/register', { name, email, password })
-      .then(() => {
+      .then((data) => {
         Swal.fire({
           icon: 'success',
           title: 'Success!',
@@ -35,6 +35,7 @@ function Signup() {
         setName('');
         setEmail('');
         setPassword('');
+        cookie.set('token', data.data.token, {expires: 2});
         window.location.href = '/login';
       })
       .catch((err) => {

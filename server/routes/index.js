@@ -1,6 +1,6 @@
 const express = require('express');
 const { User, Book } = require('../utils/db');
-const { registerUser, loginUser } = require('../controllers/authController');
+const { registerUser, loginUser, meUser } = require('../controllers/authController');
 const { createBook, getAllBooks, getBookById, updateBook, deleteBook, borrowBook, returnBook } = require('../controllers/bookController');
 const cron = require('node-cron');
 const cors = require('cors');
@@ -75,6 +75,7 @@ router.post('/books',  async (req, res) => { //authenticateJWT
 
 router.post('/auth/register', registerUser);
 router.post('/auth/login', loginUser);
+router.get('/auth/me', meUser);
 
 
 

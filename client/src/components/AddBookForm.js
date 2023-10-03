@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
+import Swal from "sweetalert2";
 
 toastr.options = {
   closeButton: false,
@@ -49,9 +50,13 @@ export default function AddBookForm() {
         },
       })
       .then(response => {
-        addNotification('New book added successfully!', true);
-        // Kitap eklemesi başarılı olduğunda yönlendirme yapın
-        window.location.href = '/book'; // Yönlendirme URL'sini buraya ekleyin
+        Swal.fire({
+          icon: 'success',
+          title: 'Book added successfully',
+          showConfirmButton: false, 
+          timer: 1500, 
+        });
+        window.location.href = '/book'; 
       })
       .catch(error => {
         console.error('Error adding book:', error);

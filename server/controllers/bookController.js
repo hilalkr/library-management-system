@@ -106,7 +106,7 @@ console.log();
 const getAllBooks = async (req, res) => {
   try {
     const books = await Book.findAll({
-      attributes: ['id', 'title', 'author', 'user_id', 'createdAt'],
+      attributes: ['id', 'title', 'author', 'genre', 'user_id', 'createdAt'],
       include: [
         {
           model: User,
